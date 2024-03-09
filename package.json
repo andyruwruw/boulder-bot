@@ -1,0 +1,38 @@
+{
+  "name": "boulder-bot",
+  "version": "1.0.0",
+  "description": "Living in Oregon comes with a lot of rain, which makes it harder to plan climbing trips. This bot was built to help warn my friends and I about weather windows at our various crags, and has been extended to include some other features!",
+  "main": "babel.config.js",
+  "scripts": {
+    "build": "tsc --build",
+    "start": "nodemon --config nodemon.json src/index.ts",
+    "clean": "rimraf ./dist && rimraf src/minecraft/libraries && rimraf src/minecraft/logs && rimraf src/minecraft/versions && rimraf src/minecraft/world && rimraf src/minecraft/banned-ips.json && rimraf src/minecraft/banned-players.json && rimraf src/minecraft/eula.txt && rimraf src/minecraft/ops.json && rimraf src/minecraft/server.properties && rimraf src/minecraft/usercache.json && rimraf src/minecraft/whitelist.json",
+    "test": "jest --colors",
+    "test:verbose": "jest --verbose --colors",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix"
+  },
+  "author": "Andrew Young",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "cheerio": "^1.0.0-rc.12",
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.1",
+    "mongoose": "^8.1.1",
+    "nodemon": "^3.0.3",
+    "tslib": "^2.6.2",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.23.9",
+    "@babel/node": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-typescript": "^7.23.3",
+    "@types/node": "^20.11.16",
+    "@types/uuid": "^9.0.8",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.2"
+  }
+}
